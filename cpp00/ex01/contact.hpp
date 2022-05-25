@@ -11,6 +11,7 @@ class Contact {
 
 public:
   Contact();
+  ~Contact();
   void set_first(std::string first);
   void set_last(std::string last);
   void set_number(std::string nbr);

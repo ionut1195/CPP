@@ -1,18 +1,15 @@
 #include "contact.hpp"
+#include "phonebook.hpp"
 
 int main(void)
 {
   Contact ionut;
+  Phonebook phonebook;
   ionut.set_first("ionut");
   ionut.set_last("tomescu");
   ionut.set_nickname();
   ionut.set_number("121212");
 
-
-
-  std::cout << ionut.get_first() << std::endl;
-  std::cout << ionut.get_last() << std::endl;
-  std::cout << ionut.get_number() << std::endl;
-  std::cout << ionut.get_nickname() << std::endl;
-
+  phonebook.add(ionut);
+  phonebook.search(0);
 }
