@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/03 20:11:11 by itomescu          #+#    #+#              #
-#    Updated: 2022/06/03 20:11:16 by itomescu         ###   ########.fr        #
+#    Created: 2022/06/03 20:12:19 by itomescu          #+#    #+#              #
+#    Updated: 2022/06/03 20:12:29 by itomescu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	megaphone
-SRC		=	megaphone.cpp
+NAME	=	account
+SRC		=	Account.cpp test.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 
 CC		=	c++

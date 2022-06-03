@@ -1,11 +1,11 @@
 #include "contact.hpp"
 
 Contact::Contact() {
-  std::cout << "Useless message from the constructor" << std::endl;
+  std::cout << "contact created" << std::endl;
 }
 
 Contact::~Contact() {
-  std::cout << "object destoryed" << std::endl;
+  std::cout << "contact destoryed" << std::endl;
 }
 
 void Contact::set_first(std::string first){
@@ -22,8 +22,13 @@ void Contact::set_number(std::string nbr)
   this->number = nbr;
 }
 
-void Contact::set_nickname(void){
-  this->nickname = this->get_first() + " " + this->get_last();
+void Contact::set_nickname(std::string nickname){
+  this->nickname = nickname;
+}
+
+void Contact::set_dark_secret(std::string secret)
+{
+  this->secret = secret;
 }
 
 std::string Contact::get_first(void){
@@ -38,4 +43,7 @@ std::string Contact::get_number(void){
 }
 std::string Contact::get_nickname(void){
   return this->nickname;
+}
+std::string Contact::get_secret(void){
+  return this->secret;
 }
