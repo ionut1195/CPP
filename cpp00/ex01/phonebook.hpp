@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:12:01 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/03 23:22:34 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/04 11:35:46 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 class Phonebook {
   Contact contacts[8];
   int total;
+  int added;
 
 public:
   Phonebook();
@@ -30,6 +31,7 @@ public:
   void  add(std::string first, std::string last, std::string number,std::string nickname, std::string secret);
   int   get_total_entries(void);
   void  search();
+  // void  exitting();
   std::string print_f(std::string s);
 
 };

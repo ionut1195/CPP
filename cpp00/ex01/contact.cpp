@@ -11,7 +11,10 @@ Contact::~Contact() {
 void Contact::set_first(std::string first){
   this->first_name = first;
 }
-
+// void Contact::destruct()
+// {
+//   this->~Contact();
+// }
 void Contact::set_last(std::string last)
 {
   this->last_name = last;

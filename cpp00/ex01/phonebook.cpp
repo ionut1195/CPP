@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:11:53 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/03 23:28:45 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/04 11:35:14 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,24 @@
 Phonebook::Phonebook() {
   std::cout << "Phonebook constructed" << std::endl;
   this->total = -1;
+  this->added = -1;
 }
 
 Phonebook::~Phonebook() {
   std::cout << "rest in pepperoni - Phonebook destroyed!" << std::endl;
 }
 
+// void Phonebook::exitting()
+// {
+//   for (int i = 0; i < 8; i++)
+//     this->contacts[i].destruct();
+//   this->~Phonebook();
+// }
+
 void Phonebook::add(std::string first, std::string last, std::string number,std::string nickname, std::string secret){
-  
   this->total++;
+  if (this->added != 7)
+    this->added++;
   this->contacts[this->total % 8].set_first(first);
   this->contacts[this->total % 8].set_last(last);
   this->contacts[this->total % 8].set_number(number);
@@ -58,7 +67,7 @@ void Phonebook::search() {
     << std::setw(10) << "Nickname" << std::setw(1) << "|"
     << std::endl;
   std::cout << "|__________________________________________|" << std::endl;
-  for (int i = 0; i <= this->total; i++)
+  for (int i = 0; i <= this->added; i++)
   {
     std::cout
     << std::setw(10) << std::to_string(i) << std::setw(1) << "|"
@@ -69,19 +78,16 @@ void Phonebook::search() {
   }
   std::cout << "|__________________________________________|" << std::endl;
   int idx = -1;
-  int entries;
-  if (this->total < 7)
-    entries = this->total;
-  else
-    entries = 7;
   if (this->total == -1)
     return;
-  while (idx < 0 || idx > entries)
+  std::cout << "Enter the index of the contact you're looking for:\nfrom 0 to " + std::to_string(this->added)  << std::endl;
+  std::cin >> idx;
+  while ((idx < 0 || idx > this->added) || std::cin.fail())
   {
-    std::cout << "Enter the index of the contact you're looking for:\nfrom 0 to " + std::to_string(entries)  << std::endl;
-    std::cin >> idx;
+    std::cout << "Enter the index of the contact you're looking for:\nfrom 0 to " + std::to_string(this->added)  << std::endl;
     std::cin.clear();
     std::cin.ignore(256, '\n');
+    std::cin >> idx;
   }
   std::cout << "First name: " + this->contacts[idx].get_first() << std::endl;
   std::cout << "Last name: " + this->contacts[idx].get_last() << std::endl;

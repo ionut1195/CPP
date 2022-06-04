@@ -18,6 +18,7 @@ public:
   void set_number(std::string nbr);
   void set_nickname(std::string nickname);
   void set_dark_secret(std::string secret);
+  // void destruct();
 
 
   std::string get_first(void);

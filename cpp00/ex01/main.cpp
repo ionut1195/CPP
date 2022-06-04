@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:11:37 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/03 23:22:43 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/04 11:35:28 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,9 @@ int main(void)
     else if (inp == "SEARCH" || inp == "search")
         phonebook.search();
     else if (inp == "EXIT" || inp == "exit")
+      // phonebook.exitting();
       return (0);
+
     std::cout << "ADD or SEARCH a contact.. or EXIT" << std::endl;
     std::cin >> inp;
   }
