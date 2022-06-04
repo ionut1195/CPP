@@ -6,12 +6,12 @@
 #    By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 20:12:19 by itomescu          #+#    #+#              #
-#    Updated: 2022/06/03 20:12:29 by itomescu         ###   ########.fr        #
+#    Updated: 2022/06/04 23:41:50 by itomescu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	account
-SRC		=	Account.cpp test.cpp
+SRC		=	Account.cpp tests.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 
 CC		=	c++
