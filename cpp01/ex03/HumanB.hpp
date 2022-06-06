@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 12:18:09 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/06 12:41:35 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/06 18:22:47 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,7 @@ public:
   HumanB(std::string name);
   ~HumanB();
   void attack();
-  void setWeapong(Weapon w);
+  void setWeapon(Weapon &w);
 };
-
-
-
 
 #endif

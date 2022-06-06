@@ -6,13 +6,13 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 12:18:13 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/06 12:48:08 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/06 18:05:11 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon weapon): weapon(weapon), name(name){}
+HumanA::HumanA(std::string name, Weapon& weapon): weapon(weapon), name(name){}
 
 HumanA::~HumanA(){}
 
