@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 20:12:01 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/05 15:47:56 by itomescu         ###   ########.fr       */
+/*   Created: 2022/06/06 12:17:49 by itomescu          #+#    #+#             */
+/*   Updated: 2022/06/06 12:36:49 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 #include <string>
-#include <iostream>
-#include <iomanip>
 
-
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
-
-class Phonebook {
-  Contact contacts[8];
-  int total;
-  int added;
+class Weapon{
+  std::string type;
 
 public:
-  Phonebook();
-  ~Phonebook();
-
-  void  add(std::string first, std::string last, std::string number,std::string nickname, std::string secret);
-  int   get_total_entries(void);
-  void  search();
-  std::string print_f(std::string s);
-
+  Weapon(std::string type);
+  ~Weapon();
+  std::string getType() const;
+  void setType(std::string type);
 };
+
+
+
 #endif

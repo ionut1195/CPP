@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 20:12:01 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/05 15:47:56 by itomescu         ###   ########.fr       */
+/*   Created: 2022/06/06 12:18:11 by itomescu          #+#    #+#             */
+/*   Updated: 2022/06/06 12:39:15 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#ifndef HUMAN_A_HPP
+#define HUMAN_A_HPP
 #include <string>
+#include "Weapon.hpp"
 #include <iostream>
-#include <iomanip>
 
-
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
-
-class Phonebook {
-  Contact contacts[8];
-  int total;
-  int added;
-
+class HumanA{
+  Weapon weapon;
+  std::string name;
 public:
-  Phonebook();
-  ~Phonebook();
-
-  void  add(std::string first, std::string last, std::string number,std::string nickname, std::string secret);
-  int   get_total_entries(void);
-  void  search();
-  std::string print_f(std::string s);
-
+  HumanA(std::string name, Weapon weapon);
+  ~HumanA();
+  void attack();
 };
+
+
+
 #endif

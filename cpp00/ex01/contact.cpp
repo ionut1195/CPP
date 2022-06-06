@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/05 12:45:34 by itomescu          #+#    #+#             */
+/*   Updated: 2022/06/05 15:48:06 by itomescu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "contact.hpp"
 
 Contact::Contact() {
@@ -11,10 +23,7 @@ Contact::~Contact() {
 void Contact::set_first(std::string first){
   this->first_name = first;
 }
-// void Contact::destruct()
-// {
-//   this->~Contact();
-// }
+
 void Contact::set_last(std::string last)
 {
   this->last_name = last;

@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 20:12:01 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/05 15:47:56 by itomescu         ###   ########.fr       */
+/*   Created: 2022/06/05 13:09:29 by itomescu          #+#    #+#             */
+/*   Updated: 2022/06/05 15:41:23 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
-#include <string>
+#include "Zombie.hpp"
 #include <iostream>
-#include <iomanip>
 
+Zombie::Zombie(std::string name): name(name)
+{
+  std::cout << this->name << " spawned" << std::endl;
+  return;
+}
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+Zombie::~Zombie()
+{
+  std::cout << this->name << " has been destroyed" << std::endl;
+  return;
+}
 
-class Phonebook {
-  Contact contacts[8];
-  int total;
-  int added;
-
-public:
-  Phonebook();
-  ~Phonebook();
-
-  void  add(std::string first, std::string last, std::string number,std::string nickname, std::string secret);
-  int   get_total_entries(void);
-  void  search();
-  std::string print_f(std::string s);
-
-};
-#endif
+void Zombie::announce(void)
+{
+  std::cout << this->name  << ": BraiiiiiiinnnzzzZ..." << std::endl; 
+}

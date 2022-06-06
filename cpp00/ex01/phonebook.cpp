@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 20:11:53 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/04 11:35:14 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/05 15:48:24 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,6 @@ Phonebook::Phonebook() {
 Phonebook::~Phonebook() {
   std::cout << "rest in pepperoni - Phonebook destroyed!" << std::endl;
 }
-
-// void Phonebook::exitting()
-// {
-//   for (int i = 0; i < 8; i++)
-//     this->contacts[i].destruct();
-//   this->~Phonebook();
-// }
 
 void Phonebook::add(std::string first, std::string last, std::string number,std::string nickname, std::string secret){
   this->total++;

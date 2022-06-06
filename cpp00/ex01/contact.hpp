@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/05 12:45:44 by itomescu          #+#    #+#             */
+/*   Updated: 2022/06/05 15:48:11 by itomescu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string>
 #include <iostream>
 #ifndef CONTACT_HPP
@@ -18,7 +30,6 @@ public:
   void set_number(std::string nbr);
   void set_nickname(std::string nickname);
   void set_dark_secret(std::string secret);
-  // void destruct();
 
 
   std::string get_first(void);
