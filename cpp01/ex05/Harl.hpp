@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 13:59:29 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/07 17:52:27 by itomescu         ###   ########.fr       */
+/*   Created: 2022/06/07 17:01:34 by itomescu          #+#    #+#             */
+/*   Updated: 2022/06/07 17:40:56 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
+#include <string>
+#include <iostream>
 
-int main(void)
+class Harl
 {
-  Zombie zm("Chewbacca");
-  Zombie *z = newZombie("Baldy");
-  randomChump("BigBoy");
-  delete z;
-  return 0;  
-}
+  void debug(void);
+  void info(void);
+  void warning(void);
+  void error(void);
+  std::string levels[4];
+  void (Harl::*point[4])(void);
+  
+public:
+  Harl();
+  ~Harl();
+  void complain(std::string level);
+  
+};
+
+
+
+
+#endif

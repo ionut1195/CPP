@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 11:59:53 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/06 12:15:36 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/07 17:57:59 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int main(void)
   std::string* stringPTR = &brain;
   std::string stringREF = brain;
 
-  std::cout << "address of brain variable  " << &brain << std::endl;
-  std::cout << "address of stringPTR variable  " << &stringPTR << std::endl;
-  std::cout << "address of stringREF  variable  " << &stringREF << std::endl;
+  std::cout << "Memory address of brain variable  " << &brain << std::endl;
+  std::cout << "Memory address held by stringPTR variable  " << stringPTR << std::endl;
+  std::cout << "Memory address held by stringREF variable  " << &stringREF << std::endl;
 
-  std::cout << "value of brain variable  " << brain << std::endl;
-  std::cout << "value of stringPTR variable  " << stringPTR << std::endl;
-  std::cout << "value of stringREF  variable  " << stringREF << std::endl;
+  std::cout << "The value of the string variable  " << brain << std::endl;
+  std::cout << "The value pointed to by stringPTR " << *stringPTR << std::endl;
+  std::cout << "The value pointed to by stringREF  " << stringREF << std::endl;
 }

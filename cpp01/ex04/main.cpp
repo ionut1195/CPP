@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:27:30 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/07 14:25:50 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:13:16 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 int main(int argc, char *argv[])
 {
   if (argc != 4)
-  {  std::cout << "you have to provide a file name, a string to be replaced and it's replacement" << std::endl;
+  {  std::cout << "Provide the following arguments "
+    << "<file name> <string to be replaced> <replacement string>"
+    << std::endl;
     return 0;
   }
   std::string f_name = argv[1];
@@ -33,9 +35,8 @@ int main(int argc, char *argv[])
   if (!new_file)
   {
     std::cout << "creation failed" << std::endl;
-    return 0;
+    return 1;
   }
-  std::cout << new_file << std::endl;
   std::ifstream fs(f_name);
 
 
@@ -44,7 +45,7 @@ int main(int argc, char *argv[])
   std::string st = builder.str();
   if (!fs){
     std::cout << "couldn't open file" << std::endl;
-    return 0;
+    return 1;
   }
   else
   {
