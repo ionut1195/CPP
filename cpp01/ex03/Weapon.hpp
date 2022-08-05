@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 12:17:49 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/06 12:36:49 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/08/05 12:35:00 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Weapon{
 public:
   Weapon(std::string type);
   ~Weapon();
-  std::string getType() const;
+  const std::string& getType() const;
   void setType(std::string type);
 };
 

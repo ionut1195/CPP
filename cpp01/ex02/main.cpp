@@ -6,7 +6,7 @@
 /*   By: itomescu <itomescu@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 11:59:53 by itomescu          #+#    #+#             */
-/*   Updated: 2022/06/07 17:57:59 by itomescu         ###   ########.fr       */
+/*   Updated: 2022/08/05 12:28:11 by itomescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 {
   std::string brain = "HI THIS IS BRAIN";
   std::string* stringPTR = &brain;
-  std::string stringREF = brain;
+  std::string& stringREF = brain;
 
   std::cout << "Memory address of brain variable  " << &brain << std::endl;
   std::cout << "Memory address held by stringPTR variable  " << stringPTR << std::endl;
